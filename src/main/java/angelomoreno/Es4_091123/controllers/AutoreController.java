@@ -1,9 +1,13 @@
 package angelomoreno.Es4_091123.controllers;
 
 import angelomoreno.Es4_091123.entities.Autore;
+import angelomoreno.Es4_091123.exceptions.BadRequestException;
+import angelomoreno.Es4_091123.payloads.aurori.NewAutoreDTO;
 import angelomoreno.Es4_091123.service.AutoreService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -21,8 +25,12 @@ public class AutoreController {
 
     @PostMapping("")
     @ResponseStatus(HttpStatus.CREATED)
-    public Autore saveAutore(@RequestBody Autore body){
-        return autoreService.save(body);
+    public Autore saveAutore(@RequestBody @Validated NewAutoreDTO body, BindingResult validation){
+        if (validation.hasErrors()) {
+            throw new BadRequestException(validation.getAllErrors());
+        } else {
+            return autoreService.save(body);
+        }
     }
 
     @GetMapping("/{id}")

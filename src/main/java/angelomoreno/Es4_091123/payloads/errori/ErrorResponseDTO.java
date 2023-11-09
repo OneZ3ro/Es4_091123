@@ -1,4 +1,6 @@
 package angelomoreno.Es4_091123.payloads.errori;
 
-public class ErrorResponseDTO {
+import java.util.Date;
+
+public record ErrorResponseDTO(String message, Date timeOfError) {
 }
