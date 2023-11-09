@@ -1,6 +1,6 @@
 package angelomoreno.Es4_091123.entities;
 
-import angelomoreno.Es3_081123.enums.Categoria;
+import angelomoreno.Es4_091123.enums.Categoria;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;

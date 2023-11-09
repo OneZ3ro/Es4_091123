@@ -1,8 +1,8 @@
 package angelomoreno.Es4_091123.service;
 
-import angelomoreno.Es3_081123.entities.Blog;
-import angelomoreno.Es3_081123.exceptions.NotFoundException;
-import angelomoreno.Es3_081123.repositories.BlogRepository;
+import angelomoreno.Es4_091123.entities.Blog;
+import angelomoreno.Es4_091123.exceptions.NotFoundException;
+import angelomoreno.Es4_091123.repositories.BlogRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,7 +1,7 @@
 package angelomoreno.Es4_091123.controllers;
 
-import angelomoreno.Es3_081123.entities.Blog;
-import angelomoreno.Es3_081123.service.BlogService;
+import angelomoreno.Es4_091123.entities.Blog;
+import angelomoreno.Es4_091123.service.BlogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
