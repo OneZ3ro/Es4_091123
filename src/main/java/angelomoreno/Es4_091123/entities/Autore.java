@@ -20,6 +20,5 @@ public class Autore {
     private String nome;
     private String cognome;
     private String email;
-    @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate dataDiNascita;
 }

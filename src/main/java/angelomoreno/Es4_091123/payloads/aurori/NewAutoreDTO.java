@@ -20,6 +20,5 @@ public record NewAutoreDTO (
         @Pattern(regexp = "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$", message = "L'email inserita non è valida")
         String email,
 
-        @NotEmpty(message = "La data di nascita è un campo obbligatorio")
         LocalDate dataDiNascita
 ){}
